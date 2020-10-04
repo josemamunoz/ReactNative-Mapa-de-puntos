@@ -30,6 +30,10 @@ export default function App() {
     setNombre('')
   }
 
+  const handleUnsubmit = () => {
+    setVisibility(false)
+  }
+
   const handleLista = () => {
     setVisibilityFilter('all_puntos')
     setVisibility(true)
@@ -45,6 +49,7 @@ export default function App() {
         <View style={styles.form}>
           <Input title='Nombre' placeholder='Nombre del punto' onChangeText={handleChangeText}/>
           <Button title='Aceptar' onPress={handleSubmit} />  
+          <Button title='Cancelar' onPress={handleUnsubmit} />
         </View>
         : <Lista puntos={puntos} closeModal={() => setVisibility(false) } />
       }

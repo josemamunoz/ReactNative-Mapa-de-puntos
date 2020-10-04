@@ -2,7 +2,6 @@ import React from 'react'
 import { Dimensions, FlatList, Text, View, StyleSheet, Button} from 'react-native';
 
 export default ({ puntos, closeModal }) => {
-    console.log(puntos.map(x => x.name))
     return (
         <>
             <View style={styles.list}>
