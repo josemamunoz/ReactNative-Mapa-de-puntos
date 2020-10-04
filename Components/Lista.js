@@ -1,11 +1,12 @@
 import React from 'react'
-import { Dimensions, Flatlist, Text, View, StyleSheet, Button} from 'react-native';
+import { Dimensions, FlatList, Text, View, StyleSheet, Button} from 'react-native';
 
 export default ({ puntos, closeModal }) => {
+    console.log(puntos.map(x => x.name))
     return (
         <>
             <View style={styles.list}>
-                <Flatlist 
+                <FlatList 
                     data={puntos.map(x => x.name)} 
                     renderItem={({item}) => <View style={styles.item}><Text>{item}</Text></View>}
                     keyExtractor={item => item}
